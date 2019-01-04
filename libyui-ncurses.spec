@@ -4,7 +4,7 @@
 
 Name:		libyui-ncurses
 Version:	2.43.9
-Release:	1
+Release:	2
 Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
 Group:		System/Libraries
@@ -40,15 +40,14 @@ Group:		System/Libraries
 Requires:	libyui
 Requires:	%{_lib}qt5x11extras5
 Provides:	%{name} = %{EVRD}
-Provides:	libyui%{major}-qt = %{EVRD}
+Provides:	libyui%{major}-ncurses = %{EVRD}
 
 %description -n %{libname}
 This package contains the library needed to run programs
-dynamically linked with libyui-qt.
+dynamically linked with libyui-ncurses.
 
 %files -n %{libname}
 %{_libdir}/yui/lib*.so.*
-
 
 #-----------------------------------------------------------------------
 
@@ -57,11 +56,10 @@ Summary:	%{summary} header files
 Group:		Development/KDE and Qt
 Requires:	libyui-devel
 Requires:	%{name} = %{EVRD}
-Provides:	yui-qt-devel = %{EVRD}
-
+Provides:	yui-ncurses-devel = %{EVRD}
 
 %description -n %{develname}
-This package provides headers files for libyui-qt development.
+This package provides headers files for libyui-ncurses development.
 
 %files -n %{develname}
 %{_includedir}/yui
