@@ -29,9 +29,6 @@ Requires:	libyui
 %description
 %{summary}.
 
-%files
-%{_bindir}/libyui-terminal
-
 #-----------------------------------------------------------------------
 
 %package -n %{libname}
@@ -67,6 +64,22 @@ This package provides headers files for libyui-ncurses development.
 %{_libdir}/cmake/libyui-ncurses
 %{_libdir}/pkgconfig/libyui-ncurses.pc
 %{_datadir}/libyui/buildtools/FindCurses6.cmake
+
+#-----------------------------------------------------------------------
+
+%package -n %{name}-tools
+Summary:        Libyui-ncurses tools
+Group:      System/Libraries
+# conflict with libyui-ncurses8, /usr/bin/libyui-terminal was originally there
+Conflicts:  %{mklibname yui 8-ncurses} < 2.43.9-3
+Requires:   screen
+
+%description -n %{name}-tools
+Character based (ncurses) user interface component for libYUI.
+libyui-terminal - useful for testing on headless machines
+
+%files -n %{name}-tools
+%{_bindir}/libyui-terminal
 
 #-----------------------------------------------------------------------
 
