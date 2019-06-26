@@ -3,13 +3,13 @@
 %define develname %mklibname yui-ncurses -d
 
 Name:		libyui-ncurses
-Version:	2_22_3
-Release:	3
+Version:	2.50.4
+Release:	1
 Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://github.com/libyui/libyui-ncurses
-Source0:	https://github.com/libyui/libyui-ncurses/archive/master.tar.gz
+Source0:	https://github.com/libyui/libyui-ncurses/archive/v%{version}.tar.gz
 Patch0:		libyui-ncurses-compile-workaround.patch
 
 BuildRequires:	pkgconfig(libpng)
@@ -20,7 +20,7 @@ BuildRequires:	ninja
 BuildRequires:	qmake5
 BuildRequires:	boost-devel
 BuildRequires:	doxygen
-BuildRequires:	texlive
+#BuildRequires:	texlive
 BuildRequires:	graphviz
 BuildRequires:	ghostscript
 BuildRequires:	pkgconfig(fontconfig)
@@ -84,7 +84,7 @@ libyui-terminal - useful for testing on headless machines
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-master
+%autosetup -p1
 
 %build
 ./bootstrap.sh
