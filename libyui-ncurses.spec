@@ -3,7 +3,7 @@
 %define develname %mklibname yui-ncurses -d
 
 Name:		libyui-ncurses
-Version:	2.43.9
+Version:	2_22_3
 Release:	3
 Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
