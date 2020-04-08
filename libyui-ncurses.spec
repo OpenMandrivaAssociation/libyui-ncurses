@@ -87,6 +87,8 @@ libyui-terminal - useful for testing on headless machines
 %autosetup -p1
 
 %build
+export CC=gcc
+export CXX=g++
 ./bootstrap.sh
 %cmake \
     -DYPREFIX=%{_prefix}  \
