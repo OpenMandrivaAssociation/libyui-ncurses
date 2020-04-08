@@ -9,7 +9,7 @@ Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://github.com/libyui/libyui-ncurses
-Source0:	https://github.com/libyui/libyui-ncurses/archive/v%{version}.tar.gz
+Source0:	https://github.com/libyui/libyui-ncurses/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch0:		libyui-ncurses-compile-workaround.patch
 
 BuildRequires:	pkgconfig(libpng)
