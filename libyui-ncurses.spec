@@ -1,3 +1,6 @@
+%define _disable_ld_no_undefined 1
+%define _disable_lto 1
+
 %define major 11
 %define libname %mklibname yui %{major}-ncurses
 %define develname %mklibname yui-ncurses -d
