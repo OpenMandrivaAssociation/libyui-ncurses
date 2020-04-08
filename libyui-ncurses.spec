@@ -14,6 +14,7 @@ Source0:	https://github.com/libyui/libyui-ncurses/archive/v%{version}/%{name}-%{
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libyui) >= 3.1.2
 BuildRequires:	pkgconfig(ncursesw)
+BuildRequires:  pkgconfig(ncurses)
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	qmake5
