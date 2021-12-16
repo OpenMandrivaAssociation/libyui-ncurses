@@ -1,16 +1,15 @@
-%define major 8
+%define major 15
 %define libname %mklibname yui %{major}-ncurses
 %define develname %mklibname yui-ncurses -d
 
 Name:		libyui-ncurses
-Version:	2.50.4
+Version:	4.2.22
 Release:	1
 Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://github.com/libyui/libyui-ncurses
-Source0:	https://github.com/libyui/libyui-ncurses/archive/v%{version}.tar.gz
-Patch0:		libyui-ncurses-compile-workaround.patch
+Source0:	https://github.com/libyui/libyui-ncurses/archive/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libyui) >= 3.1.2
@@ -61,9 +60,9 @@ This package provides headers files for libyui-ncurses development.
 %files -n %{develname}
 %{_includedir}/yui
 %{_libdir}/yui/lib*.so
-%{_libdir}/cmake/libyui-ncurses
+#%%{_libdir}/cmake/libyui-ncurses
 %{_libdir}/pkgconfig/libyui-ncurses.pc
-%{_datadir}/libyui/buildtools/FindCurses6.cmake
+#%%{_datadir}/libyui/buildtools/FindCurses6.cmake
 
 #-----------------------------------------------------------------------
 
@@ -87,11 +86,12 @@ libyui-terminal - useful for testing on headless machines
 %autosetup -p1
 
 %build
-./bootstrap.sh
+#./bootstrap.sh
 %cmake \
     -DYPREFIX=%{_prefix}  \
     -DDOC_DIR=%{_docdir} \
     -DLIB_DIR=%{_lib}    \
+    -DWERROR=off \
     -G Ninja
 
 %ninja_build
