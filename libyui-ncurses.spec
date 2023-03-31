@@ -4,7 +4,7 @@
 
 Name:		libyui-ncurses
 Version:	4.2.22
-Release:	1
+Release:	2
 Summary:	UI abstraction library - Ncurses plugin
 License:	LGPLv2+
 Group:		System/Libraries
